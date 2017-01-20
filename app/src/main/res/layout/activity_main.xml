@@ -10,8 +10,76 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.jcalzado.lab2_viewa002.MainActivity">
 
-    <TextView
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/inTextField1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:hint="Introduzca el primer valor" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_below="@+id/inTextField1"
+        android:layout_alignLeft="@+id/inTextField1"
+        android:layout_alignStart="@+id/inTextField1"
+        android:id="@+id/inTextField2"
+        android:hint="Instroduzca el segundo valor" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inTextField2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:text="Sumar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioSumar"
+            android:layout_weight="1"
+            android:checked="true" />
+
+        <RadioButton
+            android:text="Restar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioRestar"
+            android:layout_weight="1"
+            android:checked="false" />
+    </RadioGroup>
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:id="@+id/buttonOperar"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="Realizar Operación"
+        android:onClick="operar" />
+
+    <TextView
+        android:text="RESULTADO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonOperar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:id="@+id/outTextField"
+        android:textSize="24sp" />
+
+    <TextView
+        android:text="JCalzado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/JCalzado" />
 </RelativeLayout>
